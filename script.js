@@ -14,6 +14,9 @@ const playwright = require('playwright');
     await page.goto('https://www.apartments.com/hallasan-los-angeles-ca/n7jh9pm/');
     await page.waitForTimeout(5000);
 
+    const propertyName = await page.$eval('h1.propertyName', name => name.innerText);
+    // console.log(propertyName);
+
     const moveInSpecials = await page.$eval('.rentSpecialsSection', specialContainer => {
 
         const specialTextEl = specialContainer.querySelector('p.copy');
@@ -22,7 +25,7 @@ const playwright = require('playwright');
         return specialText
     });
 
-    console.log(moveInSpecials);
+    // console.log(moveInSpecials);
 
 
     const units = await page.$$eval('div[data-tab-content-id="all"] li.unitContainer.js-unitContainer', all_units =>{
@@ -44,7 +47,7 @@ const playwright = require('playwright');
         return data
     })
 
-    console.log(units)
+    // console.log(units)
 
     let transformedData = {};
 
@@ -78,7 +81,15 @@ const playwright = require('playwright');
     });
 
     let result = Object.values(transformedData);
-    console.log(result);
+    // console.log(result);
+
+    let data = {
+        propertyName,
+        moveInSpecials,
+        units: result
+    };
+
+    console.log(data);
 
     await browser.close();
 })();
