@@ -11,10 +11,7 @@ const fs = require('fs');
         // }
     };
 
-    const links = [
-        'https://www.apartments.com/hallasan-los-angeles-ca/n7jh9pm/',
-        'https://www.apartments.com/nova-apartments-on-wilshire-los-angeles-ca/e1sx1nq/'
-    ]
+    const links = fs.readFileSync('links.txt', 'utf-8').split('\n');
 
     const all_data = [];
     Promise.all(links.map(async (link) => {
