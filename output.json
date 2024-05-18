@@ -1,61 +1,143 @@
 [
   {
-    "propertyName": "Nova Apartments on Wilshire",
-    "moveInSpecials": "*up to 4 weeks on select units; listed price reflects promotion, some restrictions may apply; please contact leasing office for details!",
+    "propertyName": "3033 Wilshire",
+    "moveInSpecials": "Save up to 8 Weeks off rent! Minimum 12 month lease term required.",
     "units": [
       {
+        "bed": "0",
+        "count": 4,
+        "minPrice": 2297,
+        "maxPrice": 2727,
+        "minPSF": 3.73,
+        "maxPSF": 4.43
+      },
+      {
         "bed": "1",
-        "count": 5,
-        "minPrice": 2215,
-        "maxPrice": 4475,
-        "minPSF": 3.66,
-        "maxPSF": 4.25
+        "count": 9,
+        "minPrice": 2781,
+        "maxPrice": 3381,
+        "minPSF": 3.5,
+        "maxPSF": 4.07
       },
       {
         "bed": "2",
-        "count": 1,
-        "minPrice": 3415,
-        "maxPrice": 3415,
-        "minPSF": 3.4,
-        "maxPSF": 3.4
+        "count": 7,
+        "minPrice": 4077,
+        "maxPrice": 6831,
+        "minPSF": 2.96,
+        "maxPSF": 3.74
       }
     ]
   },
   {
-    "propertyName": "Hallasan",
-    "moveInSpecials": "Now Offering Up to 8 Weeks Rent Credit! Restrictions Apply, Contact Us Today!",
+    "propertyName": "Avana on Wilshire",
+    "moveInSpecials": "New Special New Specials - $99 Deposit On Approved Credit + 1 Month Free Credit + 3 Months Free Parking. For A Limited Time Only. Pricing and Specials Are Subject To Change.",
     "units": [
       {
         "bed": "0",
-        "count": 11,
-        "minPrice": 2385,
-        "maxPrice": 2830,
+        "count": 1,
+        "minPrice": 2288,
+        "maxPrice": 2288,
         "minPSF": 4.57,
-        "maxPSF": 5.59
+        "maxPSF": 4.57
       },
       {
         "bed": "1",
-        "count": 27,
-        "minPrice": 3345,
-        "maxPrice": 5999,
-        "minPSF": 4.16,
-        "maxPSF": 5.01
+        "count": 4,
+        "minPrice": 2548,
+        "maxPrice": 2675,
+        "minPSF": 3.37,
+        "maxPSF": 3.82
       },
       {
         "bed": "2",
-        "count": 34,
-        "minPrice": 4398,
-        "maxPrice": 8284,
-        "minPSF": 3.73,
-        "maxPSF": 5.43
+        "count": 9,
+        "minPrice": 2898,
+        "maxPrice": 3106,
+        "minPSF": 2.91,
+        "maxPSF": 3.11
+      }
+    ]
+  },
+  {
+    "propertyName": "Next on Sixth",
+    "moveInSpecials": null,
+    "units": [
+      {
+        "bed": "0",
+        "count": 12,
+        "minPrice": 2005,
+        "maxPrice": 2150,
+        "minPSF": 3.69,
+        "maxPSF": 4.62
       },
       {
-        "bed": "3",
-        "count": 18,
-        "minPrice": 4861,
-        "maxPrice": 9274,
-        "minPSF": 3.55,
-        "maxPSF": 5.13
+        "bed": "1",
+        "count": 4,
+        "minPrice": 2495,
+        "maxPrice": 3262,
+        "minPSF": 2.98,
+        "maxPSF": 3.96
+      },
+      {
+        "bed": "2",
+        "count": 3,
+        "minPrice": 3100,
+        "maxPrice": 3437,
+        "minPSF": 3.19,
+        "maxPSF": 3.37
+      }
+    ]
+  },
+  {
+    "propertyName": "Radius Koreatown",
+    "moveInSpecials": "Up to 1 month off select apartment homes. Offer valid on new leases only. Transfers excluded. [Offer good thru Jun 01, 2024]",
+    "units": [
+      {
+        "bed": "0",
+        "count": 1,
+        "minPrice": 2140,
+        "maxPrice": 2140,
+        "minPSF": 3.7,
+        "maxPSF": 3.7
+      },
+      {
+        "bed": "1",
+        "count": 9,
+        "minPrice": 2053,
+        "maxPrice": 2356,
+        "minPSF": 3.14,
+        "maxPSF": 3.86
+      }
+    ]
+  },
+  {
+    "propertyName": "The Pearl",
+    "moveInSpecials": "$500 Look & Lease Special* Restrictions Apply",
+    "units": [
+      {
+        "bed": "0",
+        "count": 7,
+        "minPrice": 2335,
+        "maxPrice": 2540,
+        "minPSF": 5.37,
+        "maxPSF": 5.99
+      },
+      {
+        "bed": "1",
+        "count": 7,
+        "minPrice": 2991,
+        "maxPrice": 3179,
+        "minPSF": 5.03,
+        "maxPSF": 5.53
+      },
+      {
+        "bed": "2",
+        "count": 3,
+        "minPrice": 3517,
+        "maxPrice": 4307,
+        "minPSF": 4.04,
+        "maxPSF": 4.21
       }
     ]
   }

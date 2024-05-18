@@ -23,13 +23,15 @@ const fs = require('fs');
         const propertyName = await page.$eval('h1.propertyName', name => name.innerText);
         // console.log(propertyName);
 
-        const moveInSpecials = await page.$eval('.rentSpecialsSection', specialContainer => {
+        const rentSpecialsSection = await page.$('.rentSpecialsSection');
+        let moveInSpecials = null;
 
-            const specialTextEl = specialContainer.querySelector('p.copy');
-            const specialText = specialTextEl ? specialTextEl.innerText : null;
-
-            return specialText
-        });
+        if (rentSpecialsSection !== null) {
+            moveInSpecials = await page.$eval('.rentSpecialsSection', specialContainer => {
+                const specialTextEl = specialContainer.querySelector('p.copy');
+                return specialTextEl ? specialTextEl.innerText : null;
+            });
+        }
 
         // console.log(moveInSpecials);
 
