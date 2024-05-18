@@ -11,16 +11,18 @@ const fs = require('fs');
         // }
     };
 
-    const links = fs.readFileSync('links.txt', 'utf-8').split('\n');
+    // Use the third command line argument as the name of the text file
+    const inputFilename = process.argv[2];
+    const links = fs.readFileSync(inputFilename, 'utf-8').split('\n');
 
     const all_data = [];
     Promise.all(links.map(async (link) => {
         const browser = await playwright.chromium.launch(launchOptions);
         const page = await browser.newPage();
-        await page.goto(link);
+        await page.goto(link, { timeout: 180000 }); 
         await page.waitForTimeout(5000);
 
-        const propertyName = await page.$eval('h1.propertyName', name => name.innerText);
+        const propertyName = await page.$eval('#propertyName', name => name.innerText);
         // console.log(propertyName);
 
         const rentSpecialsSection = await page.$('.rentSpecialsSection');
@@ -110,8 +112,9 @@ const fs = require('fs');
     })).then(() => {
         console.log('All links processed');
         
-        // Write all_data to an output file
-        fs.writeFile('output.json', JSON.stringify(all_data, null, 2), (err) => {
+        // Use the fourth command line argument as the name of the output file
+        const outputFilename = process.argv[3];
+        fs.writeFile(outputFilename, JSON.stringify(all_data, null, 2), (err) => {
             if (err) {
                 console.error('An error occurred while writing to the file:', err);
             } else {
