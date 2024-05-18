@@ -41,7 +41,7 @@ const path = require('path');
         // console.log(moveInSpecials);
 
 
-        const units = await page.$$eval('div[data-tab-content-id="all"] li.unitContainer.js-unitContainer', all_units =>{
+        const units = await page.$$eval('div[data-tab-content-id="all"] li.unitContainer', all_units =>{
             const data = [];
             all_units.forEach(unit => {
                 const unitNumEl = unit.querySelector('.unitColumn.column').querySelector('span[title]')
