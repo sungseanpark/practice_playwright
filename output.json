@@ -1,0 +1,62 @@
+[
+  {
+    "propertyName": "Hallasan",
+    "moveInSpecials": "Now Offering Up to 8 Weeks Rent Credit! Restrictions Apply, Contact Us Today!",
+    "units": [
+      {
+        "bed": "0",
+        "count": 11,
+        "minPrice": 2385,
+        "maxPrice": 2830,
+        "minPSF": 4.57,
+        "maxPSF": 5.59
+      },
+      {
+        "bed": "1",
+        "count": 27,
+        "minPrice": 3345,
+        "maxPrice": 5999,
+        "minPSF": 4.16,
+        "maxPSF": 5.01
+      },
+      {
+        "bed": "2",
+        "count": 34,
+        "minPrice": 4398,
+        "maxPrice": 8284,
+        "minPSF": 3.73,
+        "maxPSF": 5.43
+      },
+      {
+        "bed": "3",
+        "count": 18,
+        "minPrice": 4861,
+        "maxPrice": 9274,
+        "minPSF": 3.55,
+        "maxPSF": 5.13
+      }
+    ]
+  },
+  {
+    "propertyName": "Nova Apartments on Wilshire",
+    "moveInSpecials": "*up to 4 weeks on select units; listed price reflects promotion, some restrictions may apply; please contact leasing office for details!",
+    "units": [
+      {
+        "bed": "1",
+        "count": 5,
+        "minPrice": 2215,
+        "maxPrice": 4475,
+        "minPSF": 3.66,
+        "maxPSF": 4.25
+      },
+      {
+        "bed": "2",
+        "count": 1,
+        "minPrice": 3415,
+        "maxPrice": 3415,
+        "minPSF": 3.4,
+        "maxPSF": 3.4
+      }
+    ]
+  }
+]

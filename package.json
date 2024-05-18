@@ -20,6 +20,7 @@
     "fsevents": "^2.3.2",
     "playwright": "^1.44.0",
     "playwright-core": "^1.44.0",
+    "playwright-extra": "^4.3.6",
     "undici-types": "^5.26.5"
   },
   "description": ""
