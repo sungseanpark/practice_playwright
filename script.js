@@ -1,5 +1,6 @@
 const playwright = require('playwright');
 const fs = require('fs');
+const path = require('path');
 
 (async() =>{
     const launchOptions = {
@@ -13,7 +14,9 @@ const fs = require('fs');
 
     // Use the third command line argument as the name of the text file
     const inputFilename = process.argv[2];
-    const links = fs.readFileSync(inputFilename, 'utf-8').split('\n');
+    // Prepend the directory name to the filename
+    const inputFilePath = path.join('links', inputFilename);
+    const links = fs.readFileSync(inputFilePath, 'utf-8').split('\n');
 
     const all_data = [];
     Promise.all(links.map(async (link) => {
@@ -114,7 +117,9 @@ const fs = require('fs');
         
         // Use the fourth command line argument as the name of the output file
         const outputFilename = process.argv[3];
-        fs.writeFile(outputFilename, JSON.stringify(all_data, null, 2), (err) => {
+        // Prepend the directory name to the output filename
+        const outputFilePath = path.join('outputs', outputFilename);
+        fs.writeFile(outputFilePath, JSON.stringify(all_data, null, 2), (err) => {
             if (err) {
                 console.error('An error occurred while writing to the file:', err);
             } else {
