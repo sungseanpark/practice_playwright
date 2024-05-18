@@ -14,20 +14,9 @@ const playwright = require('playwright');
     await page.goto('https://www.apartments.com/hallasan-los-angeles-ca/n7jh9pm/');
     await page.waitForTimeout(5000);
 
-    const moveInSpecials = await page.$eval('.moveInSpecialsContainer', specialContainer => {
-        // const data = [];
-        // all_products.forEach(product => {
-        //     const titleEl = product.querySelector('.a-size-base-plus');
-        //     const title = titleEl ? titleEl.innerText : null;
-        //     const priceEl = product.querySelector('.a-price');
-        //     const price = priceEl ? priceEl.innerText : null;
-        //     const ratingEl = product.querySelector('.a-icon-alt');
-        //     const rating = ratingEl ? ratingEl.innerText : null;
-        //     data.push({ title, price, rating});
-        // });
-        // return data;
+    const moveInSpecials = await page.$eval('.rentSpecialsSection', specialContainer => {
 
-        const specialTextEl = specialContainer.querySelector('p');
+        const specialTextEl = specialContainer.querySelector('p.copy');
         const specialText = specialTextEl ? specialTextEl.innerText : null;
 
         return specialText
@@ -35,23 +24,6 @@ const playwright = require('playwright');
 
     console.log(moveInSpecials);
 
-    // const unitTypes = await page.$$eval('.tabHeader.screen.multifamily > li > button', all_unitTypeButtons => {
-    //     const data = [];
-    //     all_unitTypeButtons.forEach(unitTypeButton => {
-    //         const unitType = unitTypeButton.innerText;
-    //         data.push({unitType})
-    //         unitTypeButton.click();
-    //         await page.$$eval('.js-priceGridShowMoreLabel', all_showMoreButtons => {
-    //             all_showMoreButtons.forEach(showMoreButton => {
-    //                 showMoreButton.click()
-    //             });
-    //         });
-            
-    //     })
-    //     return data
-    // });
-    
-    // const divWithIdAll = await page.querySelector('div[data-tab-content-id="all"]');
 
     const units = await page.$$eval('div[data-tab-content-id="all"] li.unitContainer.js-unitContainer', all_units =>{
         const data = [];
@@ -73,6 +45,40 @@ const playwright = require('playwright');
     })
 
     console.log(units)
+
+    let transformedData = {};
+
+    units.forEach(unit => {
+        let price = Number(unit.price);
+        let sqft = Number(unit.sqft.replace(/,/g, ''));
+        let psf = isNaN(price) || isNaN(sqft) ? null : (price / sqft).toFixed(2);
+    
+        if (!transformedData[unit.bed]) {
+            transformedData[unit.bed] = {
+                bed: unit.bed,
+                count: 0,
+                minPrice: isNaN(price) ? Infinity : price,
+                maxPrice: isNaN(price) ? -Infinity : price,
+                minPSF: psf === null ? Infinity : psf,
+                maxPSF: psf === null ? -Infinity : psf
+            };
+        }
+    
+        transformedData[unit.bed].count++;
+    
+        if (!isNaN(price)) {
+            transformedData[unit.bed].minPrice = Math.min(transformedData[unit.bed].minPrice, price);
+            transformedData[unit.bed].maxPrice = Math.max(transformedData[unit.bed].maxPrice, price);
+        }
+    
+        if (psf !== null) {
+            transformedData[unit.bed].minPSF = Math.min(transformedData[unit.bed].minPSF, psf);
+            transformedData[unit.bed].maxPSF = Math.max(transformedData[unit.bed].maxPSF, psf);
+        }
+    });
+
+    let result = Object.values(transformedData);
+    console.log(result);
 
     await browser.close();
 })();
