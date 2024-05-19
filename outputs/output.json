@@ -1,0 +1,32 @@
+[
+  {
+    "propertyName": "The Pearl",
+    "moveInSpecials": "$500 Look & Lease Special* Restrictions Apply",
+    "units": [
+      {
+        "bed": "0",
+        "count": 7,
+        "minPrice": 2335,
+        "maxPrice": 2540,
+        "minPSF": 5.37,
+        "maxPSF": 5.99
+      },
+      {
+        "bed": "1",
+        "count": 7,
+        "minPrice": 2991,
+        "maxPrice": 3179,
+        "minPSF": 5.03,
+        "maxPSF": 5.53
+      },
+      {
+        "bed": "2",
+        "count": 3,
+        "minPrice": 3517,
+        "maxPrice": 4307,
+        "minPSF": 4.04,
+        "maxPSF": 4.21
+      }
+    ]
+  }
+]

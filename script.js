@@ -13,7 +13,7 @@ const path = require('path');
     };
 
     // Use the third command line argument as the name of the text file
-    const inputFilename = process.argv[2];
+    const inputFilename = process.argv[2] + 'Links.txt';
     // Prepend the directory name to the filename
     const inputFilePath = path.join('links', inputFilename);
     const links = fs.readFileSync(inputFilePath, 'utf-8').split('\n');
@@ -116,7 +116,7 @@ const path = require('path');
         console.log('All links processed');
         
         // Use the fourth command line argument as the name of the output file
-        const outputFilename = process.argv[3];
+        const outputFilename = process.argv[2] + 'Output.json';
         // Prepend the directory name to the output filename
         const outputFilePath = path.join('outputs', outputFilename);
         fs.writeFile(outputFilePath, JSON.stringify(all_data, null, 2), (err) => {
