@@ -22,76 +22,24 @@
     ]
   },
   {
-    "propertyName": "Luna",
-    "moveInSpecials": "UP TO 6 WEEKS FREE Special on select units! Some restrictions May Apply. Please contact the Leasing Office for details.",
+    "propertyName": "The Hana",
+    "moveInSpecials": "1 Month FREE on 13 Month Lease. Discounts are already applied in the price listed.",
     "units": [
       {
         "bed": "1",
-        "count": 9,
-        "minPrice": 2000,
-        "maxPrice": 2400,
-        "minPSF": 3.46,
-        "maxPSF": 4.14
-      },
-      {
-        "bed": "2",
-        "count": 1,
-        "minPrice": 3300,
-        "maxPrice": 3300,
-        "minPSF": 3.44,
-        "maxPSF": 3.44
-      }
-    ]
-  },
-  {
-    "propertyName": "ABY - The Abbey",
-    "moveInSpecials": "$500 OFF 1ST MONTH LEASE!! (on approved credit/13 month lease)",
-    "units": [
-      {
-        "bed": "0",
-        "count": 1,
-        "minPrice": 1995,
-        "maxPrice": 1995,
-        "minPSF": 3.71,
-        "maxPSF": 3.71
-      },
-      {
-        "bed": "1",
-        "count": 1,
-        "minPrice": 2195,
-        "maxPrice": 2195,
-        "minPSF": 3.19,
-        "maxPSF": 3.19
-      }
-    ]
-  },
-  {
-    "propertyName": "The Nexen",
-    "moveInSpecials": "1 Month FREE on a 13 Month Lease. (Price listed reflects the discount evenly applied)",
-    "units": [
-      {
-        "bed": "0",
         "count": 3,
-        "minPrice": 2169,
-        "maxPrice": 2318,
-        "minPSF": 3.92,
-        "maxPSF": 4.05
-      },
-      {
-        "bed": "1",
-        "count": 2,
-        "minPrice": 2463,
-        "maxPrice": 2515,
-        "minPSF": 3.67,
-        "maxPSF": 3.77
+        "minPrice": 2631,
+        "maxPrice": 2798,
+        "minPSF": 3.01,
+        "maxPSF": 3.45
       },
       {
         "bed": "2",
-        "count": 1,
-        "minPrice": 3295,
-        "maxPrice": 3295,
-        "minPSF": 3.54,
-        "maxPSF": 3.54
+        "count": 2,
+        "minPrice": 3676,
+        "maxPrice": 3888,
+        "minPSF": 2.92,
+        "maxPSF": 3.55
       }
     ]
   },
@@ -118,6 +66,140 @@
     ]
   },
   {
+    "propertyName": "Kurve",
+    "moveInSpecials": "“Up to 6 Weeks Free + $1500 Look & Lease! *Restrictions Apply”",
+    "units": [
+      {
+        "bed": "0",
+        "count": 9,
+        "minPrice": 2206,
+        "maxPrice": 3258,
+        "minPSF": 3.76,
+        "maxPSF": 5.32
+      },
+      {
+        "bed": "1",
+        "count": 21,
+        "minPrice": 2630,
+        "maxPrice": 4106,
+        "minPSF": 3.44,
+        "maxPSF": 5.26
+      },
+      {
+        "bed": "2",
+        "count": 9,
+        "minPrice": 4276,
+        "maxPrice": 8995,
+        "minPSF": 3.36,
+        "maxPSF": 5.38
+      },
+      {
+        "bed": "3",
+        "count": 1,
+        "minPrice": 20995,
+        "maxPrice": 20995,
+        "minPSF": 5.59,
+        "maxPSF": 5.59
+      }
+    ]
+  },
+  {
+    "propertyName": "30Sixty",
+    "moveInSpecials": "Up to 8 Weeks Free Special *on select units; some restrictions may apply; please contact leasing office for details (Specials have been applied with the price for some units)!",
+    "units": [
+      {
+        "bed": "1",
+        "count": 10,
+        "minPrice": 2050,
+        "maxPrice": 2750,
+        "minPSF": 3.37,
+        "maxPSF": 4.17
+      },
+      {
+        "bed": "2",
+        "count": 3,
+        "minPrice": 3015,
+        "maxPrice": 3600,
+        "minPSF": 3.43,
+        "maxPSF": 3.85
+      }
+    ]
+  },
+  {
+    "propertyName": "The Audrey",
+    "moveInSpecials": "1. Up to 1 Month FREE with a lease term of 13 month. (Discounts are already reflected in the listed prices.)",
+    "units": [
+      {
+        "bed": "1",
+        "count": 1,
+        "minPrice": 2354,
+        "maxPrice": 2354,
+        "minPSF": 3.37,
+        "maxPSF": 3.37
+      },
+      {
+        "bed": "2",
+        "count": 9,
+        "minPrice": 2950,
+        "maxPrice": 3700,
+        "minPSF": 2.66,
+        "maxPSF": 3.49
+      }
+    ]
+  },
+  {
+    "propertyName": "The Gemma",
+    "moveInSpecials": "Now offering 1 month FREE on a 13 month lease (applied on the 3rd month). Price listed includes the discount evenly applied over the lease term, however the original price is the monthly base rent.",
+    "units": [
+      {
+        "bed": "0",
+        "count": 8,
+        "minPrice": 2195,
+        "maxPrice": 2647,
+        "minPSF": 3.37,
+        "maxPSF": 4.08
+      },
+      {
+        "bed": "1",
+        "count": 2,
+        "minPrice": 2700,
+        "maxPrice": 3100,
+        "minPSF": 2.7,
+        "maxPSF": 3.67
+      },
+      {
+        "bed": "2",
+        "count": 1,
+        "minPrice": 3650,
+        "maxPrice": 3650,
+        "minPSF": 2.86,
+        "maxPSF": 2.86
+      }
+    ]
+  },
+  {
+    "propertyName": "The Thompson",
+    "moveInSpecials": "UP TO 6 WEEKS FREE on select units; some restrictions may apply; please contact leasing office for details!",
+    "units": [
+      {
+        "bed": "0",
+        "count": 12,
+        "minPrice": 1920,
+        "maxPrice": 2120,
+        "minPSF": 3.91,
+        "maxPSF": 4.51
+      },
+      {
+        "bed": "1",
+        "count": 5,
+        "minPrice": 2300,
+        "maxPrice": 2420,
+        "minPSF": 3.86,
+        "maxPSF": 4.51
+      }
+    ]
+  },
+  {
     "propertyName": "Sawyer",
     "moveInSpecials": "We are offering up to 4 weeks free rent on a 13 month lease or 2 months free on a 18 month lease on selected units on approved credit. ** Discounts are already reflected in the price listed",
     "units": [
@@ -128,6 +210,80 @@
         "maxPrice": 3515,
         "minPSF": 3.16,
         "maxPSF": 3.53
+      }
+    ]
+  },
+  {
+    "propertyName": "Luna",
+    "moveInSpecials": "UP TO 6 WEEKS FREE Special on select units! Some restrictions May Apply. Please contact the Leasing Office for details.",
+    "units": [
+      {
+        "bed": "1",
+        "count": 9,
+        "minPrice": 2000,
+        "maxPrice": 2400,
+        "minPSF": 3.46,
+        "maxPSF": 4.14
+      },
+      {
+        "bed": "2",
+        "count": 1,
+        "minPrice": 3300,
+        "maxPrice": 3300,
+        "minPSF": 3.44,
+        "maxPSF": 3.44
+      }
+    ]
+  },
+  {
+    "propertyName": "Archer",
+    "moveInSpecials": "1. Get $500 Look & Lease Bonus if apply & Sign within 24 hrs (For studio,1B1B,2B2B) 2. Two Month Free on 12 Month Lease 2. One Month Free on 13 Month Lease. (Discounts are already reflected in the listed prices.)",
+    "units": [
+      {
+        "bed": "0",
+        "count": 9,
+        "minPrice": 1994,
+        "maxPrice": 2610,
+        "minPSF": 3.59,
+        "maxPSF": 5
+      },
+      {
+        "bed": "1",
+        "count": 16,
+        "minPrice": 2300,
+        "maxPrice": 3590,
+        "minPSF": 3.37,
+        "maxPSF": 4.56
+      },
+      {
+        "bed": "2",
+        "count": 3,
+        "minPrice": 3810,
+        "maxPrice": 4080,
+        "minPSF": 3.95,
+        "maxPSF": 4.26
+      }
+    ]
+  },
+  {
+    "propertyName": "ABY - The Abbey",
+    "moveInSpecials": "$500 OFF 1ST MONTH LEASE!! (on approved credit/13 month lease)",
+    "units": [
+      {
+        "bed": "0",
+        "count": 1,
+        "minPrice": 1995,
+        "maxPrice": 1995,
+        "minPSF": 3.71,
+        "maxPSF": 3.71
+      },
+      {
+        "bed": "1",
+        "count": 1,
+        "minPrice": 2195,
+        "maxPrice": 2195,
+        "minPSF": 3.19,
+        "maxPSF": 3.19
       }
     ]
   },
@@ -206,154 +362,6 @@
     ]
   },
   {
-    "propertyName": "30Sixty",
-    "moveInSpecials": "Up to 8 Weeks Free Special *on select units; some restrictions may apply; please contact leasing office for details (Specials have been applied with the price for some units)!",
-    "units": [
-      {
-        "bed": "1",
-        "count": 10,
-        "minPrice": 2050,
-        "maxPrice": 2750,
-        "minPSF": 3.37,
-        "maxPSF": 4.17
-      },
-      {
-        "bed": "2",
-        "count": 3,
-        "minPrice": 3015,
-        "maxPrice": 3600,
-        "minPSF": 3.43,
-        "maxPSF": 3.85
-      }
-    ]
-  },
-  {
-    "propertyName": "The Audrey",
-    "moveInSpecials": "1. Up to 1 Month FREE with a lease term of 13 month. (Discounts are already reflected in the listed prices.)",
-    "units": [
-      {
-        "bed": "1",
-        "count": 1,
-        "minPrice": 2354,
-        "maxPrice": 2354,
-        "minPSF": 3.37,
-        "maxPSF": 3.37
-      },
-      {
-        "bed": "2",
-        "count": 9,
-        "minPrice": 2950,
-        "maxPrice": 3700,
-        "minPSF": 2.66,
-        "maxPSF": 3.49
-      }
-    ]
-  },
-  {
-    "propertyName": "The Thompson",
-    "moveInSpecials": "UP TO 6 WEEKS FREE on select units; some restrictions may apply; please contact leasing office for details!",
-    "units": [
-      {
-        "bed": "0",
-        "count": 12,
-        "minPrice": 1920,
-        "maxPrice": 2120,
-        "minPSF": 3.91,
-        "maxPSF": 4.51
-      },
-      {
-        "bed": "1",
-        "count": 5,
-        "minPrice": 2300,
-        "maxPrice": 2420,
-        "minPSF": 3.86,
-        "maxPSF": 4.51
-      }
-    ]
-  },
-  {
-    "propertyName": "The Gemma",
-    "moveInSpecials": "Now offering 1 month FREE on a 13 month lease (applied on the 3rd month). Price listed includes the discount evenly applied over the lease term, however the original price is the monthly base rent.",
-    "units": [
-      {
-        "bed": "0",
-        "count": 8,
-        "minPrice": 2195,
-        "maxPrice": 2647,
-        "minPSF": 3.37,
-        "maxPSF": 4.08
-      },
-      {
-        "bed": "1",
-        "count": 2,
-        "minPrice": 2700,
-        "maxPrice": 3100,
-        "minPSF": 2.7,
-        "maxPSF": 3.67
-      },
-      {
-        "bed": "2",
-        "count": 1,
-        "minPrice": 3650,
-        "maxPrice": 3650,
-        "minPSF": 2.86,
-        "maxPSF": 2.86
-      }
-    ]
-  },
-  {
-    "propertyName": "The Hana",
-    "moveInSpecials": "1 Month FREE on 13 Month Lease. Discounts are already applied in the price listed.",
-    "units": [
-      {
-        "bed": "1",
-        "count": 3,
-        "minPrice": 2631,
-        "maxPrice": 2798,
-        "minPSF": 3.01,
-        "maxPSF": 3.45
-      },
-      {
-        "bed": "2",
-        "count": 2,
-        "minPrice": 3676,
-        "maxPrice": 3888,
-        "minPSF": 2.92,
-        "maxPSF": 3.55
-      }
-    ]
-  },
-  {
-    "propertyName": "Archer",
-    "moveInSpecials": "1. Get $500 Look & Lease Bonus if apply & Sign within 24 hrs (For studio,1B1B,2B2B) 2. Two Month Free on 12 Month Lease 2. One Month Free on 13 Month Lease. (Discounts are already reflected in the listed prices.)",
-    "units": [
-      {
-        "bed": "0",
-        "count": 9,
-        "minPrice": 1994,
-        "maxPrice": 2610,
-        "minPSF": 3.59,
-        "maxPSF": 5
-      },
-      {
-        "bed": "1",
-        "count": 16,
-        "minPrice": 2300,
-        "maxPrice": 3590,
-        "minPSF": 3.37,
-        "maxPSF": 4.56
-      },
-      {
-        "bed": "2",
-        "count": 3,
-        "minPrice": 3810,
-        "maxPrice": 4080,
-        "minPSF": 3.95,
-        "maxPSF": 4.26
-      }
-    ]
-  },
-  {
     "propertyName": "Westmore on Wilshire",
     "moveInSpecials": null,
     "units": [
@@ -406,40 +414,32 @@
     ]
   },
   {
-    "propertyName": "Kurve",
-    "moveInSpecials": "“Up to 6 Weeks Free + $1500 Look & Lease! *Restrictions Apply”",
+    "propertyName": "The Nexen",
+    "moveInSpecials": "1 Month FREE on a 13 Month Lease. (Price listed reflects the discount evenly applied)",
     "units": [
       {
         "bed": "0",
-        "count": 9,
-        "minPrice": 2206,
-        "maxPrice": 3258,
-        "minPSF": 3.76,
-        "maxPSF": 5.32
+        "count": 3,
+        "minPrice": 2169,
+        "maxPrice": 2318,
+        "minPSF": 3.92,
+        "maxPSF": 4.05
       },
       {
         "bed": "1",
-        "count": 21,
-        "minPrice": 2630,
-        "maxPrice": 4106,
-        "minPSF": 3.44,
-        "maxPSF": 5.26
+        "count": 2,
+        "minPrice": 2463,
+        "maxPrice": 2515,
+        "minPSF": 3.67,
+        "maxPSF": 3.77
       },
       {
         "bed": "2",
-        "count": 9,
-        "minPrice": 4276,
-        "maxPrice": 8995,
-        "minPSF": 3.36,
-        "maxPSF": 5.38
-      },
-      {
-        "bed": "3",
         "count": 1,
-        "minPrice": 20995,
-        "maxPrice": 20995,
-        "minPSF": 5.59,
-        "maxPSF": 5.59
+        "minPrice": 3295,
+        "maxPrice": 3295,
+        "minPSF": 3.54,
+        "maxPSF": 3.54
       }
     ]
   }
