@@ -69,13 +69,15 @@ const XLSX = require('xlsx');
         units.forEach(unit => {
             let price = Number(unit.price);
             let sqft = Number(unit.sqft.replace(/,/g, ''));
-            let psf = isNaN(price) || isNaN(sqft) ? null : (price / sqft).toFixed(2);
+            // Ignore if price or sqft is NaN or 0
+            let psf = isNaN(price) || isNaN(sqft) || (sqft===0) || (price ===0) ? null : (price / sqft).toFixed(2);
         
             if (!transformedData[unit.bed]) {
                 transformedData[unit.bed] = {
                     bed: unit.bed,
                     count: 0,
-                    minPrice: isNaN(price) ? Infinity : price,
+                    // don't count for minPrice if price is NaN or 0
+                    minPrice: isNaN(price) || (price === 0) ? Infinity : price,
                     maxPrice: isNaN(price) ? -Infinity : price,
                     minPSF: psf === null ? Infinity : psf,
                     maxPSF: psf === null ? -Infinity : psf
@@ -84,7 +86,7 @@ const XLSX = require('xlsx');
         
             transformedData[unit.bed].count++;
         
-            if (!isNaN(price)) {
+            if (!isNaN(price) || (price !== 0)) {
                 transformedData[unit.bed].minPrice = Math.min(transformedData[unit.bed].minPrice, price);
                 transformedData[unit.bed].maxPrice = Math.max(transformedData[unit.bed].maxPrice, price);
             }
