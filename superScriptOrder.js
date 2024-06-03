@@ -21,7 +21,8 @@ const XLSX = require('xlsx');
     const links = fs.readFileSync(inputFilePath, 'utf-8').split('\n');
 
     const all_data = [];
-    Promise.all(links.map(async (link) => {
+
+    const promises = links.map(async (link) => {
         const browser = await playwright.chromium.launch(launchOptions);
         const page = await browser.newPage();
         await page.goto(link, { timeout: 180000 }); 
@@ -108,15 +109,21 @@ const XLSX = require('xlsx');
 
         //console.log(data);
 
-        all_data.push({
-            propertyName,
-            moveInSpecials,
-            units: result
-        });
+        // all_data.push({
+        //     propertyName,
+        //     moveInSpecials,
+        //     units: result
+        // });
 
         await browser.close();
 
-    })).then(() => {
+        return data;
+
+    })
+    Promise.all(promises).then((results) => {
+        results.forEach(result => {
+            all_data.push(result);
+        });
         console.log('All links processed');
         
         // Use the fourth command line argument as the name of the output file
@@ -171,7 +178,7 @@ const XLSX = require('xlsx');
                         priceRange = `$${unit.minPrice}-${unit.maxPrice}`;
                     }
                     let psfRange="";
-                    if(!unit.minPSF){
+                    if(!unit.minPSF || ((unit.minPSF === Infinity) && (unit.maxPSF === -Infinity))){
                         psfRange = "";
                     }
                     else if(unit.minPSF == unit.maxPSF){
