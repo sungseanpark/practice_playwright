@@ -19,6 +19,8 @@ const XLSX = require('xlsx');
     // Prepend the directory name to the filename
     const inputFilePath = path.join('links', inputFilename);
     const links = fs.readFileSync(inputFilePath, 'utf-8').split('\n');
+    const totalUnitCountFilePath = path.join('totalUnitCounts', targetName + 'TotalUnitCounts.txt');
+    const totalUnitCounts = fs.readFileSync(totalUnitCountFilePath, 'utf-8').split('\n').map(count => parseInt(count));
 
     const all_data = [];
 
@@ -140,7 +142,7 @@ const XLSX = require('xlsx');
         all_transformedData = [];
         const date = new Date();
         const dateToday = `${date.getMonth() + 1}/${date.getDate()}`;
-        all_data.forEach(property => {
+        all_data.forEach((property, index) => {
 
             // console.log(data)
         
@@ -156,10 +158,19 @@ const XLSX = require('xlsx');
                 const key = unit.bed === "0" ? "Studio" : `${unit.bed} bed`;
                 return `${key}: ${unit.count}`;
             }).join('\n');
+
+            // Get the total unit count for the current property
+            const totalUnits = totalUnitCounts[index];
+
+            // Calculate the total number of vacant units
+            const vacantUnits = property.units.reduce((total, unit) => total + Number(unit.count), 0);
+
+            // Calculate the vacancy percent
+            const vacancyPercent = (vacantUnits / totalUnits) * 100;
         
             // Calculate the percent (you'll need to replace this with your own calculation)
             // let percent = "3.4"; // replace with your own calculation
-            vacancy += `\nPercent: %`;
+            vacancy += `\nPercent: ${vacancyPercent.toFixed(1)}%`;
         
             transformedData["Vacancy"] = vacancy;
             transformedData["moveInSpecials"] = property.moveInSpecials ? property.moveInSpecials : "none";
@@ -197,7 +208,7 @@ const XLSX = require('xlsx');
             all_transformedData.push(transformedData);
         });
 
-        const outputFilePath = path.join(__dirname, 'excelFiles', `${targetName}.xlsx`);
+        const outputFilePath = path.join(__dirname, 'excelFiles', `${targetName}_${date.getMonth()+1}_${date.getDate()}_${date.getFullYear()}.xlsx`);
 
         // Convert the data to a worksheet and add it to a new workbook
         const worksheet = XLSX.utils.json_to_sheet(all_transformedData);
